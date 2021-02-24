@@ -23,27 +23,32 @@ const bookList = document.querySelector('#book-list');
 bookList.innerHTML += super_powereds.title + " by " + super_powereds.author + "-" + super_powereds.pages + " " + super_powereds.has_read;
 
 
-const deleteList = document.querySelectorAll('#book-list .delete');
-
-Array.from(deleteList).forEach(function(btn) {
-
-    btn.addEventListener('click', function(e){
-        const li = e.target.parentElement;
-        li.parentNode.removeChild(li)
-    })
-})
-
 const addBtn = document.querySelector("#add-book button");
 
 const title = document.getElementById("book-title");
 
+const bookListItem = document.querySelector('#book-list ul')
+
 addBtn.addEventListener('click', function (e){
     e.preventDefault();
     if(title.value !== "") {
-        bookList.innerHTML += ("<li>" + title.value + "</li>");
+        bookListItem.innerHTML += ("<li><span class='name'> " + title.value + "</span> <span class='delete'>delete</span></li>");
     } else {
         return alert("Please enter a title");
     }
     
     title.value="";
 })
+
+
+const list = document.querySelector("#book-list ul");
+
+list.addEventListener("click" , function(e) {
+    if(e.target.className == 'delete'){
+        const li = e.target.parentElement;
+        list.removeChild(li);
+    }
+})
+
+
+

@@ -9,13 +9,20 @@ h1 {
 }
 
 #book-list {
+    
    text-align: center;
-   margin-left: -5%;
+  
    
 }
 
+ul li {
+    width: 300px;
+    margin:0 auto;
+    list-style: none; 
+}
 .books {
-    list-style-type: none;
+    
+    width
 }
 
 #add-book, #search-books {

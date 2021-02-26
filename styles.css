@@ -1,7 +1,18 @@
 #wrapper {
     margin: 0 auto;
-
+    width: 50%;
     align-content: center;
+    border: 1px solid grey;
+    border-radius: 20px;
+    height: 700px;
+}
+
+#page-banner {
+    background-color: lightgrey;
+    margin-top: -2.75%;
+    border-radius: 20px 20px 0 0;
+    height: 150px;
+    text-align: center;
 }
 
 h1 {
@@ -11,18 +22,22 @@ h1 {
 #book-list {
     
    text-align: center;
-  
-   
+
 }
 
 ul li {
-    width: 300px;
-    margin:0 auto;
+    width: 400px;
+    height: 30px;
+    margin:15px auto;
     list-style: none; 
-}
-.books {
+    border-left: black solid 3px;
     
-    width
+}
+
+ul li:hover {
+    
+    border-left: blue solid 3px;
+    font-size: 1.1em;
 }
 
 #add-book, #search-books {
@@ -30,6 +45,11 @@ ul li {
 }
 
 .delete {
-    color:red;
+    background-color: rgb(255, 42, 42);
+    color:rgb(235, 235, 235);
+    height:30px;
+    width: 50px;
     float: right;
+    padding-top: 5px;
+    border-radius: 5px;
 }

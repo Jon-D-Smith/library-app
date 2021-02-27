@@ -17,6 +17,7 @@
 //DOM Elemet Variables for adding books
 const addBtn = document.forms['add-book'];
 const title = document.getElementById("book-title");
+const author = document.getElementById("author");
 const bookListItem = document.querySelector('#book-list ul')
 //DOM Element Variables for deleting books
 const list = document.querySelector("#book-list ul");
@@ -25,13 +26,19 @@ const list = document.querySelector("#book-list ul");
 addBtn.addEventListener('submit', function (e){
     //Preventing the page from reloading on submit
     e.preventDefault();
-    if(title.value !== "") {
-        bookListItem.innerHTML += ("<li><span class='name'> " + title.value + "</span> <span class='delete'>delete</span></li>");
-    } else {
+    if(title.value !== "" && author.value !== "") {
+        bookListItem.innerHTML += ("<li><span class='name'>" + title.value + " by: " + author.value + "</span> <span class='delete'>delete</span></li>");
+        
+
+    }
+    else {
         return alert("Please enter a title");
     }
+
+
     //Once I hit submit, clear the text
     title.value="";
+    author.value="";
 })
 
 //Event Listener for the delet buttons

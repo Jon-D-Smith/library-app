@@ -36,7 +36,7 @@ h1 {
 
 ul li {
     max-width: 400px;
-    min-height: 30px;
+    min-height: 45px;
     margin:15px auto;
     list-style: none; 
     border-left: black solid 3px;
@@ -84,6 +84,7 @@ ul li:hover {
     width:50%;
     margin: 0 auto;
     text-align: center;
+
 }
 
 input {

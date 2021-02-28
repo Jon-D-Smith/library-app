@@ -5,6 +5,8 @@ const author = document.getElementById("author");
 //DOM Element Variables for deleting books
 const list = document.querySelector("#book-list ul");
 
+//create a papagraph for error
+const error = document.createElement('p');
 
 // Functionality for adding a new book
 function submitBook(e){
@@ -13,7 +15,9 @@ function submitBook(e){
 
     //If either field is empty, notify the user then break out of the function
     if (title.value == "" || author.value == "") {
-        alert("Please fillout each field before submitting");
+        
+        error.textContent = "Please complete the form"
+        addBtn.appendChild(error);
         return;
     }
 
@@ -42,6 +46,7 @@ function submitBook(e){
     //reset the field values
     title.value="";
     author.value="";
+    addBtn.removeChild(error);
 }
 
 function deleteFun(e) {

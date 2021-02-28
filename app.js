@@ -27,7 +27,7 @@ addBtn.addEventListener('submit', function (e){
     //Preventing the page from reloading on submit
     e.preventDefault();
     if(title.value !== "" && author.value !== "") {
-        bookListItem.innerHTML += ("<li><span class='name'>" + title.value + " by: " + author.value + "</span> <span class='delete'>delete</span></li>");
+        bookListItem.innerHTML += ("<li> <span class='name'>" + title.value + "</span>" + "<span class='delete'>delete</span> <p class='author'>" + author.value + "</p> </li>");
         
 
     }

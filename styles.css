@@ -93,6 +93,11 @@ input {
     width: 200px;
     text-align: center;
     outline: none;
+    background-color: lightgray;
+}
+
+input:hover {
+    background-color: white;
 }
 
 label{
@@ -114,7 +119,7 @@ button {
 
 button:hover {
     cursor: pointer;
-    width:157px;
-    height: 37px;
-    
+    /* width:157px;
+    height: 37px; */
+    background-color:#266297;
 }

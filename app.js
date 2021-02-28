@@ -1,3 +1,67 @@
+//DOM Elemet Variables for adding books
+const addBtn = document.forms['add-book'];
+const title = document.getElementById("book-title");
+const author = document.getElementById("author");
+const bookListItem = document.querySelector('#book-list ul')
+//DOM Element Variables for deleting books
+const list = document.querySelector("#book-list ul");
+
+
+// Functionality for adding a new book
+function submitBook(e){
+    //prevent the default submit behavior (Reloading the page)
+    e.preventDefault();
+
+    //If either field is empty, notify the user then break out of the function
+    if (title.value == "" || author.value == "") {
+        alert("Please fillout each field before submitting");
+        return;
+    }
+
+    //create element
+    const li = document.createElement('li');
+    const bookName = document.createElement('span');
+    const authorName = document.createElement('p'); 
+    const deleteBtn = document.createElement('span');
+
+    //add content
+    deleteBtn.textContent = 'delete';
+    bookName.textContent = title.value;
+    authorName.textContent = author.value;
+
+    //add styling
+    deleteBtn.classList.add('delete');
+    bookName.classList.add('name');
+    authorName.classList.add('author');
+
+    //append items    
+    li.appendChild(bookName);
+    li.appendChild(deleteBtn);
+    li.appendChild(authorName);
+    list.appendChild(li);
+
+    //reset the field values
+    title.value="";
+    author.value="";
+}
+
+function deleteFun(e) {
+    if(e.target.className == 'delete'){
+        const li = e.target.parentElement;
+        list.removeChild(li);
+    }
+}
+
+//Event Listener for adding a new book
+addBtn.addEventListener('submit', submitBook);
+
+//Event Listener for the delete buttons
+list.addEventListener("click" , deleteFun)
+
+
+
+
+
 //                Book Object (Will want to use later) -- Leave Commented out for now
 
 // function Book(title, author, pages, has_read) {
@@ -12,42 +76,3 @@
 //  }
 //  const super_powereds =  new Book("SuperPowereds","Drew Hayes", "lots", "False")
 //---------------------------------------------------------------------------------------------------//
-
-
-//DOM Elemet Variables for adding books
-const addBtn = document.forms['add-book'];
-const title = document.getElementById("book-title");
-const author = document.getElementById("author");
-const bookListItem = document.querySelector('#book-list ul')
-//DOM Element Variables for deleting books
-const list = document.querySelector("#book-list ul");
-
-//Event Listener for adding a new book
-addBtn.addEventListener('submit', function (e){
-    //Preventing the page from reloading on submit
-    e.preventDefault();
-    if(title.value !== "" && author.value !== "") {
-        bookListItem.innerHTML += ("<li> <span class='name'>" + title.value + "</span>" + "<span class='delete'>delete</span> <p class='author'>" + author.value + "</p> </li>");
-        
-
-    }
-    else {
-        return alert("Please enter a title");
-    }
-
-
-    //Once I hit submit, clear the text
-    title.value="";
-    author.value="";
-})
-
-//Event Listener for the delet buttons
-list.addEventListener("click" , function(e) {
-    if(e.target.className == 'delete'){
-        const li = e.target.parentElement;
-        list.removeChild(li);
-    }
-})
-
-
-

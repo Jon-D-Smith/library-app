@@ -108,11 +108,12 @@ button {
     color:white;
     font-size: 16px;
     outline: none;
-    
+    margin-bottom: 20px;
 }
 
 button:hover {
     cursor: pointer;
     width:157px;
     height: 37px;
+    
 }

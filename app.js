@@ -2,7 +2,6 @@
 const addBtn = document.forms['add-book'];
 const title = document.getElementById("book-title");
 const author = document.getElementById("author");
-const bookListItem = document.querySelector('#book-list ul')
 //DOM Element Variables for deleting books
 const list = document.querySelector("#book-list ul");
 

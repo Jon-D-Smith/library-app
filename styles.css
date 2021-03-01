@@ -123,3 +123,8 @@ button:hover {
     height: 37px; */
     background-color:#266297;
 }
+
+#errorMsg {
+    color:rgb(197, 33, 33);
+    font-size: large;
+}

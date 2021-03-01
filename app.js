@@ -7,6 +7,7 @@ const list = document.querySelector("#book-list ul");
 
 //create a papagraph for error
 const error = document.createElement('p');
+const errorMsg = document.getElementById('errorMsg');
 
 // Functionality for adding a new book
 function submitBook(e){
@@ -16,8 +17,8 @@ function submitBook(e){
     //If either field is empty, notify the user then break out of the function
     if (title.value == "" || author.value == "") {
         
-        error.textContent = "Please complete the form"
-        addBtn.appendChild(error);
+        error.textContent = "Please complete the form";
+        errorMsg.appendChild(error);
         return;
     }
 
@@ -46,7 +47,7 @@ function submitBook(e){
     //reset the field values
     title.value="";
     author.value="";
-    addBtn.removeChild(error);
+    errorMsg.textContent = "";
 }
 
 function deleteFun(e) {

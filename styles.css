@@ -132,7 +132,7 @@ button:hover {
 @media screen and (max-width: 350px){
     #wrapper{
         width: 100%;
-        min-height: 500px;
+        min-height: 300px;
     }
     
     button {
@@ -142,21 +142,30 @@ button:hover {
     input {
         width: 100px;
     }
+    #add-book {
+        width:75%;
+    
+    }
 }
 
 /* Medium/Large Cell phone media queries */
 @media screen and (max-width: 500px){
     #wrapper{
         width: 100%;
-        min-height: 500px;
+        min-height: 400px;
     }
     
     button {
         width:175px;
+        
     }
 
     input {
         width: 175px;
+    }
+    #add-book {
+        width:75%;
+    
     }
 }
 

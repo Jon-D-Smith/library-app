@@ -128,11 +128,42 @@ button:hover {
     color:rgb(197, 33, 33);
     font-size: large;
 }
-
-
-@media screen and (max-width: 400px){
+/* Small Cell Phone Media Queries */
+@media screen and (max-width: 350px){
     #wrapper{
         width: 100%;
         min-height: 500px;
+    }
+    
+    button {
+        width:100px;
+    }
+
+    input {
+        width: 100px;
+    }
+}
+
+/* Medium/Large Cell phone media queries */
+@media screen and (max-width: 500px){
+    #wrapper{
+        width: 100%;
+        min-height: 500px;
+    }
+    
+    button {
+        width:175px;
+    }
+
+    input {
+        width: 175px;
+    }
+}
+
+/* Tablet Media Queries */
+@media screen and (max-width: 800px){
+    #wrapper{
+        width: 80%;
+        min-height: 800px;
     }    
 }

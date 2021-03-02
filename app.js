@@ -44,6 +44,8 @@ function submitBook(e){
     li.appendChild(authorName);
     list.appendChild(li);
 
+    
+
     //reset the field values
     title.value="";
     author.value="";

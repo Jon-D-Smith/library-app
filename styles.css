@@ -128,3 +128,11 @@ button:hover {
     color:rgb(197, 33, 33);
     font-size: large;
 }
+
+
+@media screen and (max-width: 400px){
+    #wrapper{
+        width: 100%;
+        min-height: 500px;
+    }    
+}
